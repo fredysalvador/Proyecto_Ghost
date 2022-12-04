@@ -21,6 +21,7 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     private boolean victoria = false, colocadas = false;
 
     public GhostGameFrame() {
+        setResizable(false);
         initComponents();
         this.setLocationRelativeTo(null);
         tablero_panel.hide();
@@ -92,6 +93,12 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
         config_bt = new javax.swing.JButton();
         Title_lbl = new javax.swing.JLabel();
         Fondo1_lbl = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         MiPerfil_panel = new javax.swing.JPanel();
         Titulo_lbl = new javax.swing.JLabel();
         verdatos_bt = new javax.swing.JButton();
@@ -125,6 +132,10 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 51, 51));
+        setMaximumSize(new java.awt.Dimension(962, 890));
+        setMinimumSize(new java.awt.Dimension(962, 890));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(962, 890));
         setResizable(false);
 
         tablero_panel.setBackground(new java.awt.Color(51, 51, 51));
@@ -239,50 +250,51 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
         pos12.setContentAreaFilled(false);
         tablero_panel.add(pos12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 100, 90));
 
+        surrender_bt.setBackground(new java.awt.Color(51, 51, 51));
         surrender_bt.setText("Rendirse");
         surrender_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 surrender_btActionPerformed(evt);
             }
         });
-        tablero_panel.add(surrender_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 760, -1, -1));
+        tablero_panel.add(surrender_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 760, 100, 50));
 
-        lbl_fantasmas2.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
+        lbl_fantasmas2.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_fantasmas2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_fantasmas2.setText("Fantasmas J2");
-        tablero_panel.add(lbl_fantasmas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, -1, -1));
+        tablero_panel.add(lbl_fantasmas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
 
-        lbl_fantasmas1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
+        lbl_fantasmas1.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_fantasmas1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_fantasmas1.setText("Fantasmas J1");
-        tablero_panel.add(lbl_fantasmas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 150, -1));
+        tablero_panel.add(lbl_fantasmas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 150, -1));
 
-        lbl_b2.setFont(new java.awt.Font("Tempus Sans ITC", 0, 16)); // NOI18N
+        lbl_b2.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_b2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_b2.setText("Fantasmas Buenos: ");
-        tablero_panel.add(lbl_b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+        tablero_panel.add(lbl_b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
 
-        lbl_m2.setFont(new java.awt.Font("Tempus Sans ITC", 0, 16)); // NOI18N
+        lbl_m2.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_m2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_m2.setText("Fantasmas Malos: ");
-        tablero_panel.add(lbl_m2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, -1));
+        tablero_panel.add(lbl_m2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, -1, -1));
 
-        lbl_b1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 16)); // NOI18N
+        lbl_b1.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_b1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_b1.setText("Fantasmas Buenos: ");
-        tablero_panel.add(lbl_b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
+        tablero_panel.add(lbl_b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
 
-        lbl_m1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 16)); // NOI18N
+        lbl_m1.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_m1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_m1.setText("Fantasmas Malos: ");
-        tablero_panel.add(lbl_m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
+        tablero_panel.add(lbl_m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
-        lbl_turno.setFont(new java.awt.Font("Tempus Sans ITC", 2, 24)); // NOI18N
+        lbl_turno.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         lbl_turno.setForeground(new java.awt.Color(255, 255, 255));
         lbl_turno.setText("Turno");
         tablero_panel.add(lbl_turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
-        jugador_turno.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
+        jugador_turno.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         jugador_turno.setForeground(new java.awt.Color(255, 255, 255));
         jugador_turno.setText("Jugador 1");
         tablero_panel.add(jugador_turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 110, 30));
@@ -291,60 +303,111 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
         tablero_panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 600, 580));
 
         menu_panel.setBackground(new java.awt.Color(51, 51, 51));
+        menu_panel.setMaximumSize(new java.awt.Dimension(962, 890));
+        menu_panel.setMinimumSize(new java.awt.Dimension(962, 890));
+        menu_panel.setPreferredSize(new java.awt.Dimension(962, 890));
         menu_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jugar_bt.setFont(new java.awt.Font("Algerian", 3, 18)); // NOI18N
+        jugar_bt.setBackground(new java.awt.Color(51, 51, 51));
+        jugar_bt.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         jugar_bt.setText("Jugar Ghosts");
         jugar_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jugar_btActionPerformed(evt);
             }
         });
-        menu_panel.add(jugar_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 240, 50));
+        menu_panel.add(jugar_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 270, 80));
 
-        reportes_bt.setFont(new java.awt.Font("Algerian", 3, 18)); // NOI18N
+        reportes_bt.setBackground(new java.awt.Color(51, 51, 51));
+        reportes_bt.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         reportes_bt.setText("Reportes");
         reportes_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reportes_btActionPerformed(evt);
             }
         });
-        menu_panel.add(reportes_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 240, 50));
+        menu_panel.add(reportes_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, 270, 80));
 
-        perfil_bt.setFont(new java.awt.Font("Algerian", 3, 18)); // NOI18N
+        perfil_bt.setBackground(new java.awt.Color(51, 51, 51));
+        perfil_bt.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         perfil_bt.setText("Mi Perfil");
         perfil_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 perfil_btActionPerformed(evt);
             }
         });
-        menu_panel.add(perfil_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 240, 50));
+        menu_panel.add(perfil_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, 270, 80));
 
-        salir_bt.setFont(new java.awt.Font("Algerian", 3, 18)); // NOI18N
+        salir_bt.setBackground(new java.awt.Color(51, 51, 51));
+        salir_bt.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         salir_bt.setText("Cerrar Sesion");
         salir_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salir_btActionPerformed(evt);
             }
         });
-        menu_panel.add(salir_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 240, 50));
+        menu_panel.add(salir_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 650, 270, 80));
 
-        config_bt.setFont(new java.awt.Font("Algerian", 3, 18)); // NOI18N
+        config_bt.setBackground(new java.awt.Color(51, 51, 51));
+        config_bt.setFont(new java.awt.Font("Fira Code", 0, 18)); // NOI18N
         config_bt.setText("Configuracion");
         config_bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 config_btActionPerformed(evt);
             }
         });
-        menu_panel.add(config_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 240, 50));
+        menu_panel.add(config_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 270, 80));
 
-        Title_lbl.setFont(new java.awt.Font("Algerian", 3, 82)); // NOI18N
+        Title_lbl.setFont(new java.awt.Font("Zombie Holocaust", 3, 80)); // NOI18N
         Title_lbl.setForeground(new java.awt.Color(153, 255, 0));
         Title_lbl.setText("Menu Principal");
-        menu_panel.add(Title_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 680, -1));
+        menu_panel.add(Title_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 490, -1));
 
-        Fondo1_lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fondoGhosts.jpg"))); // NOI18N
+        Fondo1_lbl.setBackground(new java.awt.Color(51, 51, 51));
         menu_panel.add(Fondo1_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTextField1.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField1.setEditable(false);
+        jTextField1.setFont(new java.awt.Font("Fira Code", 0, 14)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Presione los botones para ingresar a los menus disponibles!");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        menu_panel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 550, 30));
+
+        jTextField2.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField2.setFont(new java.awt.Font("Fira Code", 0, 14)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setText("Bienvenido al:");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        menu_panel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 150, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ghostmenu.gif"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        menu_panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 410, 500));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/soundon.png"))); // NOI18N
+        menu_panel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 800, 80, 70));
+
+        jButton7.setBackground(new java.awt.Color(51, 51, 51));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        menu_panel.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 20, 80, 80));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ghostgif1.gif"))); // NOI18N
+        jLabel12.setText("jLabel2");
+        menu_panel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, 360, 380));
 
         MiPerfil_panel.setBackground(new java.awt.Color(51, 51, 51));
         MiPerfil_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -567,7 +630,7 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 962, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -576,7 +639,7 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(menu_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menu_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 962, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -610,7 +673,7 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(menu_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menu_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -638,17 +701,23 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     }// </editor-fold>//GEN-END:initComponents
 
     private void perfil_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfil_btActionPerformed
+          setResizable(false);
+        this.setLocationRelativeTo(null);
         MiPerfil_panel.show();
         menu_panel.hide();
     }//GEN-LAST:event_perfil_btActionPerformed
 
     private void salir_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salir_btActionPerformed
+         setResizable(false);
+        this.setLocationRelativeTo(null);
         main mn = new main();
         this.setVisible(false);
         mn.setVisible(true);
     }//GEN-LAST:event_salir_btActionPerformed
 
     private void jugar_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugar_btActionPerformed
+        setResizable(false);
+        this.setLocationRelativeTo(null);
         vaciarTablero();
         enemy = JOptionPane.showInputDialog(this, "Ingrese el nombre del rival: ");
         if (User.buscarUser(enemy) != null) {
@@ -683,6 +752,8 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     }//GEN-LAST:event_cambiarpas_btActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         setResizable(false);
+        this.setLocationRelativeTo(null);
         menu_panel.show();
         MiPerfil_panel.hide();
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -693,6 +764,8 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     }//GEN-LAST:event_verdatos_btActionPerformed
 
     private void eliminar_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_btActionPerformed
+         setResizable(false);
+        this.setLocationRelativeTo(null);
         JOptionPane.showMessageDialog(this, "Se ha eliminado la cuenta!");
         User.eraseUser(main.actualUser);
         this.setVisible(false);
@@ -703,11 +776,15 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Reportes_Panel.hide();
         menu_panel.show();
+        setResizable(false);
+        this.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Ranking_panel.show();
         Reportes_Panel.hide();
+        setResizable(false);
+        this.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -755,14 +832,20 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
         Reportes_Panel.show();
         menu_panel.hide();
         generarTable();
+        setResizable(false);
+        this.setLocationRelativeTo(null);
     }//GEN-LAST:event_reportes_btActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        setResizable(false);
+        this.setLocationRelativeTo(null);
         Ranking_panel.hide();
         menu_panel.show();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void config_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_config_btActionPerformed
+        setResizable(false);
+        this.setLocationRelativeTo(null);
         cofig_panel.show();
         menu_panel.hide();
     }//GEN-LAST:event_config_btActionPerformed
@@ -806,6 +889,18 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
             modo = "manual";
         }
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void vaciarTablero() {
         String posicionVacia = "";
@@ -1300,7 +1395,7 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     private javax.swing.JPanel Ranking_panel;
     private javax.swing.JPanel Reportes_Panel;
     private javax.swing.JTable Tabla_players;
-    private javax.swing.JLabel Title_lbl;
+    private static javax.swing.JLabel Title_lbl;
     private javax.swing.JLabel Titulo_lbl;
     private javax.swing.JButton cambiarpas_bt;
     private javax.swing.JPanel cofig_panel;
@@ -1317,8 +1412,12 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1327,6 +1426,8 @@ public class GhostGameFrame extends javax.swing.JFrame implements ActionListener
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jugador_turno;
     private javax.swing.JButton jugar_bt;
     private javax.swing.JLabel lbl_b1;
